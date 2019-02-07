@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Vue.js</title>
+</head>
+
+<body>
+	<main class="container">
+		<h1 v-if="conectado">Estoy conectado</h1>
+		<h2 v-if="edad < 18">No puedes entrar</h2>
+		<h2 v-else-if="edad > 200">Eres inmortal</h2>
+		<h2 v-else>Puedes entrar</h2>
+		
+		<template v-if="conectado">
+			<h3>Bienvenido Jhon</h3>
+			<ul>
+				<li>
+					<a href="#">Mis datos</a>
+					<a href="#">Menajes</a>
+					<a href="#">Salir</a>
+				</li>
+			</ul>
+		</template>
+		<h4 v-else>No estas conectado</h4>
+		<pre>{{data}}</pre>
+	</main>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+ 	<script src="main.js"></script>
+</body>
+</html>
